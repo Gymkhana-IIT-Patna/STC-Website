@@ -46,14 +46,15 @@
                     <div class="col-12 col-md-10 d-none d-xl-block">
                         <nav class="site-navigation position-relative text-right" role="navigation">
                             <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                                <li class="cta"><a href="./ictc.html">ICTC 2.0</a></li>
                                 <li><a href="./index.html">Home</a></li>
-                                <li><a href="https://docs.google.com/document/d/1K8PaABIOqdFSkbvkWgcCM-hP-LWoxV7wPsF1rK50pCY"
+                                <li><a href="https://docs.google.com/document/d/1t4_XEc_8A7e_lOYxm47l6QvEqv5jm0O88UuK0pErDbw/edit?usp=sharing"
                                         target="_blank">Rulebook</a></li>
                                 <li class="active"><a href="./housedivision.html">Houses</a></li>
                                 <li><a href="./leaderboard.html">Leaderboard</a></li>
                                 <li><a href="../index.html">STC</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
-                                <li class="cta"><a href="./ictc.html">ICTC 2.0</a></li>
+                                
                             </ul>
                         </nav>
                     </div>
@@ -67,17 +68,17 @@
         <div class="site-section site-hero">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-10">
+                    <div class="col-md-10" style="margin-top: -300px;">
                         <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="100">House Division</h1>
-                        <span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300">Scroll Down</span>
+                        
                     </div>
                 </div>
             </div>
         </div>
 
-        <h1 class="text-center" style="margin-bottom: 100px;">The event has not started yet. Stay tuned for further updates</h1>
-        <div class="site-section">
-            <div class="container" style="display: none;">
+        <!-- <h1 class="text-center" style="margin-bottom: 100px;">The event has not started yet. Stay tuned for further updates</h1> -->
+        <div class="site-section" style="margin-top: -600px;">
+            <div class="container" >
 
                 <!-- <h3 data-aos="fade-up" data-aos-delay="100">Tech Season Leaderboard</h3> -->
                 <p>Enter your Roll No. or Name to search or select the group to see all its entries</p>
@@ -167,7 +168,8 @@
 
     <script type="text/javascript">
         $.ajax({
-            url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS8dHAjWp9kvXtN564RcOvaBZQwBQ76tUaAB_HI216z-gykevMzwppC5w0DdGYZ63QHhUTl1P_ylA6-/pub?gid=0&single=true&output=csv',
+            url:'https://docs.google.com/spreadsheets/d/e/2PACX-1vQWj1eLQf_TMbnH4jss2YIl79UKrNTbKxPTzydvwuoMiESBzQffYppCScL20bbgs_-urnZFM5xW9P28/pub?gid=443432262&single=true&output=csv',
+            // url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS8dHAjWp9kvXtN564RcOvaBZQwBQ76tUaAB_HI216z-gykevMzwppC5w0DdGYZ63QHhUTl1P_ylA6-/pub?gid=0&single=true&output=csv',
             success: loadDataToState,
             error: function () {
                 $('#leader-div').html('<p>Leaderboard could not be fetched.</p>');
@@ -200,32 +202,32 @@
                 }
                 if (cells[0].length != 0) {
                     // console.log(cells[3])
-                    if (cells[3] == 'Auriga') {
+                    if (cells[4] == 'Auriga') {
                         auriga.push({
-                            roll: cells[0],
-                            name: cells[1],
-                            program: cells[2],
+                            roll: cells[1],
+                            name: cells[2],
+                            // program: cells[2],
                         })
                     }
-                    else if (cells[3] == 'Pegasus') {
+                    else if (cells[4] == 'Pegasus') {
                         pegasus.push({
-                            roll: cells[0],
-                            name: cells[1],
-                            program: cells[2],
+                            roll: cells[1],
+                            name: cells[2],
+                            // program: cells[2],
                         })
                     }
-                    else if (cells[3] == 'Cassiopeia') {
+                    else if (cells[4] == 'Cassiopeia') {
                         cassiopeia.push({
-                            roll: cells[0],
-                            name: cells[1],
-                            program: cells[2],
+                            roll: cells[1],
+                            name: cells[2],
+                            // program: cells[2],
                         })
                     }
-                    else if (cells[3] == 'Draco') {
+                    else if (cells[4] == 'Draco') {
                         draco.push({
-                            roll: cells[0],
-                            name: cells[1],
-                            program: cells[2],
+                            roll: cells[1],
+                            name: cells[2],
+                            // program: cells[2],
                         })
                     }
                 }
@@ -262,18 +264,17 @@
                 `<table class=\"table table-borderless table-hover table-responsive-sm table-sm\">
                     <span>Select House</span>
                     <select id="houseOptions" onchange="renderHouseChange()" style="margin: 0 0 20px 0; width: 100%;">
-                        <option ${!(auriga.length != 0 && pegasus.length == 0 && cassiopeia.length == 0 && draco.length == 0) && !(auriga.length == 0 && pegasus.length != 0 && cassiopeia.length == 0 && draco.length == 0) && !(auriga.length == 0 && pegasus.length == 0 && cassiopeia.length != 0 && draco.length == 0) && !(auriga.length == 0 && pegasus.length == 0 && cassiopeia.length == 0 && draco.length != 0) ? 'selected' : ''} value="all" id="all">All</option>
-                        <option ${auriga.length != 0 && pegasus.length == 0 && cassiopeia.length == 0 && draco.length == 0 ? 'selected' : ''} value="auriga" id="auriga">Auriga</option>
+                        <option ${!(pegasus.length == 0 && cassiopeia.length == 0 && draco.length == 0) && !(pegasus.length != 0 && cassiopeia.length == 0 && draco.length == 0) && !(pegasus.length == 0 && cassiopeia.length != 0 && draco.length == 0) && !( pegasus.length == 0 && cassiopeia.length == 0 && draco.length != 0) ? 'selected' : ''} value="all" id="all">All</option>
                         <option ${auriga.length == 0 && pegasus.length != 0 && cassiopeia.length == 0 && draco.length == 0 ? 'selected' : ''} value="pegasus" id="pegasus">Pegasus</option>
                         <option ${auriga.length == 0 && pegasus.length == 0 && cassiopeia.length != 0 && draco.length == 0 ? 'selected' : ''} value="cassiopeia" id="cassiopeia">Cassiopeia</option>
                         <option ${auriga.length == 0 && pegasus.length == 0 && cassiopeia.length == 0 && draco.length != 0 ? 'selected' : ''} value="draco" id="draco">Draco</option>
                         </select>
-                        <thead><tr class="bg-primary" style="color:#f8f9fa;"><th scope="col">Roll No.</th><th scope="col">Name</th><th scope="col">Program</th><th scope="col">House</th></tr></thead><tbody>`;
+                        <thead><tr class="bg-primary" style="color:#f8f9fa;"><th scope="col">Roll No.</th><th scope="col">Name</th><th scope="col">House</th></tr></thead><tbody>`;
             for (var i = 0; i < auriga.length; i++) {
                 table += '<tr>';
                 table += '<td class=\"stud-details\">' + auriga[i].roll + '</td>';
                 table += '<td class=\"stud-details\">' + auriga[i].name + '</td>';
-                table += '<td class=\"stud-details\">' + auriga[i].program + '</td>';
+                // table += '<td class=\"stud-details\">' + auriga[i].program + '</td>';
                 table += '<th scope="row" class=\"stud-details\">Auriga</th>';
                 table += '</tr>';
             }
@@ -283,7 +284,7 @@
                 table += '<tr>';
                 table += '<td class=\"stud-details\">' + pegasus[i].roll + '</td>';
                 table += '<td class=\"stud-details\">' + pegasus[i].name + '</td>';
-                table += '<td class=\"stud-details\">' + pegasus[i].program + '</td>';
+                // table += '<td class=\"stud-details\">' + pegasus[i].program + '</td>';
                 table += '<th scope="row" class=\"stud-details\">Pegasus</th>';
                 table += '</tr>';
             }
@@ -293,7 +294,7 @@
                 table += '<tr>';
                 table += '<td class=\"stud-details\">' + cassiopeia[i].roll + '</td>';
                 table += '<td class=\"stud-details\">' + cassiopeia[i].name + '</td>';
-                table += '<td class=\"stud-details\">' + cassiopeia[i].program + '</td>';
+                // table += '<td class=\"stud-details\">' + cassiopeia[i].program + '</td>';
                 table += '<th scope="row" class=\"stud-details\">Cassiopeia</th>';
                 table += '</tr>';
             }
@@ -303,7 +304,7 @@
                 table += '<tr>';
                 table += '<td class=\"stud-details\">' + draco[i].roll + '</td>';
                 table += '<td class=\"stud-details\">' + draco[i].name + '</td>';
-                table += '<td class=\"stud-details\">' + draco[i].program + '</td>';
+                // table += '<td class=\"stud-details\">' + draco[i].program + '</td>';
                 table += '<th scope="row" class=\"stud-details\">Draco</th>';
                 table += '</tr>';
             }
@@ -344,12 +345,12 @@
                 var {
                     roll,
                     name,
-                    program
+                    // program
                 } = obj;
                 roll = roll.toLowerCase();
                 name = name.toLowerCase();
-                program = program.toLowerCase();
-                if (roll.includes(inp) || name.includes(inp) || program.includes(inp)) {
+                // program = program.toLowerCase();
+                if (roll.includes(inp) || name.includes(inp) ) {
                     aurigaClone.push(obj);
                 }
             })
@@ -362,8 +363,8 @@
                 } = obj;
                 roll = roll.toLowerCase();
                 name = name.toLowerCase();
-                program = program.toLowerCase();
-                if (roll.includes(inp) || name.includes(inp) || program.includes(inp)) {
+                // program = program.toLowerCase();
+                if (roll.includes(inp) || name.includes(inp) ) {
                     pegasusClone.push(obj);
                 }
             })
@@ -376,8 +377,8 @@
                 } = obj;
                 roll = roll.toLowerCase();
                 name = name.toLowerCase();
-                program = program.toLowerCase();
-                if (roll.includes(inp) || name.includes(inp) || program.includes(inp)) {
+                // program = program.toLowerCase();
+                if (roll.includes(inp) || name.includes(inp) ) {
                     cassiopeiaClone.push(obj);
                 }
             })
@@ -390,8 +391,8 @@
                 } = obj;
                 roll = roll.toLowerCase();
                 name = name.toLowerCase();
-                program = program.toLowerCase();
-                if (roll.includes(inp) || name.includes(inp) || program.includes(inp)) {
+                // program = program.toLowerCase();
+                if (roll.includes(inp) || name.includes(inp) ) {
                     dracoClone.push(obj);
                 }
             })

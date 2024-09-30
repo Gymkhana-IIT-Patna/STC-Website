@@ -4,6 +4,28 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+
+    // this function is for the filter of team section the use is not to show phd and pg representatives when 2023-2024 & 2024-2025 filter is chosen
+    document.addEventListener("DOMContentLoaded", function () {
+        const filters = document.querySelectorAll("#portfolio-flters li");
+        const pgphd = document.querySelector(".pgphd");
+
+        filters.forEach(filter => {
+            filter.addEventListener("click", function () {
+                // Remove 'hidden' class when specific filters are clicked
+                if (filter.classList.contains("filter-2020") ||
+                    filter.classList.contains("filter-2021") ||
+                    filter.classList.contains("filter-2022")) {
+                    pgphd.classList.remove("hidden");
+                } else {
+                    pgphd.classList.add("hidden");
+                }
+            });
+        });
+    });
+ // ************************************end of the function**************************************************************************
+
+
 !(function($) {
     "use strict";
 

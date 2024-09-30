@@ -58,13 +58,14 @@
                     <div class="col-12 col-md-10 d-none d-xl-block">
                         <nav class="site-navigation position-relative text-right" role="navigation">
                             <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                                <li class="cta"><a href="./ictc.html">ICTC 2.0</a></li>
                                 <li><a href="./index.html">Home</a></li>
-                                <li><a href="https://docs.google.com/document/d/1K8PaABIOqdFSkbvkWgcCM-hP-LWoxV7wPsF1rK50pCY" target="_blank">Rulebook</a></li>
+                                <li><a href="https://docs.google.com/document/d/1t4_XEc_8A7e_lOYxm47l6QvEqv5jm0O88UuK0pErDbw/edit?usp=sharing" target="_blank">Rulebook</a></li>
                                 <li><a href="./housedivision.html">Houses</a></li>
                                 <li class="active"><a href="./leaderboard.html">Leaderboard</a></li>
                                 <li><a href="../index.html">STC</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
-                                <li class="cta"><a href="./ictc.html">ICTC 2.0</a></li>
+                                
                             </ul>
                         </nav>
                     </div>
@@ -80,15 +81,15 @@
                 <div class="row align-items-center">
                     <div class="col-md-10">
                         <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="100">Tech Season Leaderboard</h1>
-                        <span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300">Scroll down</span>
+                        <!-- <span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300">Scroll down</span> -->
                     </div>
                 </div>
             </div>
         </div>
 
-        <h1 class="text-center" style="margin-bottom: 100px;">The event has not started yet. Stay tuned for further updates</h1>
-        <div class="site-section">
-            <div class="container" style="display: none;">
+        <!-- <h1 class="text-center" style="margin-bottom: 100px;">The event has not started yet. Stay tuned for further updates</h1> -->
+        <div class="site-section" style="margin-top: -200px;">
+            <div class="container">
                 <h1 class="d-block mb-4 text-center" data-aos="fade-up" data-aos-delay="100">Leaderboard 2023</h1>
                 <div id="leader-div" class="mb-3" data-aos="fade-up" data-aos-delay="300">
                     <p>Leaderboard loading...</p>
@@ -96,14 +97,15 @@
                 <div class="text-center">
                 <button id="view-hide" class="my-3 btn-custom " data-aos="fade-up" data-aos-delay="400" onclick="getElementById('leader-event-div').style.display = getElementById('leader-event-div').style.display === 'none' ? '' : 'none'; getElementById('view-hide').innerHTML = getElementById('leader-event-div').style.display === 'none' ? '<span>View Eventwise Breakup</span>' : '<span>Hide Eventwise Breakup</span>'"><span>View Eventwise Breakup</span></button>
                 </div>
-                <div id="leader-event-div" class="mt-3" style="display:none;" data-aos="fade-up" data-aos-delay="300">
+                <div id="leader-event-div" class="mt-3" data-aos="fade-up" data-aos-delay="300">
                     <p>Eventwise breakup loading...</p>
                 </div>
 
                 <script type="text/javascript">
                     $.ajax({
                         async: true,
-                        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTTQ57WRqi5NKIGDa2WxnpNU6xmy8zKwksCu9yPfjUGp38t1R-OtKDLtT2e3h-7S2KO8g4JBmoAYwQG/pub?gid=0&single=true&output=csv',
+                        // url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT-Kl9UxM2U1ptumn1_N6Zwkke0a4ysmPmu-CrfGP5GNZsJ1WlXsPDy-2drOmK7atft7YA-1OumYbkL/pub?output=csv',
+                        url :'https://docs.google.com/spreadsheets/d/e/2PACX-1vQItOxOyaSNG8QTXFupfcI7Pg_Rzrd0Y5DWAHZaVofFRa-HLq9BqIaRwOOnrE2tdF_-oX5JlH-4R4L4/pub?gid=0&single=true&output=csv',
                         success: maketable,
                         error: function() {
                             $('#leader-div').html('<p>Leaderboard could not be fetched.</p>');
@@ -126,23 +128,28 @@
                                 return;
                             }
                             sortedData.push({
+                                // event: cells[0],
+                                // auriga: cells[1].trim(),
+                                // pegasus: cells[2].trim(),
+                                // cassiopeia: cells[3].trim(),
+                                // draco: cells[4].trim()
                                 event: cells[0],
-                                auriga: cells[1].trim(),
-                                pegasus: cells[2].trim(),
-                                cassiopeia: cells[3].trim(),
-                                draco: cells[4].trim()
+                                // auriga: cells[1].trim(),
+                                pegasus: cells[1].trim(),
+                                cassiopeia: cells[2].trim(),
+                                draco: cells[3].trim()
                             });
                         }
                         
                         let total = {
-                            auriga: 0,
+                            // auriga: 0,
                             pegasus: 0,
                             cassiopeia: 0,
                             draco: 0
                         };
 
                         for (var i = 0; i < sortedData.length; i++) {
-                            total.auriga += parseInt(sortedData[i].auriga);
+                            // total.auriga += parseInt(sortedData[i].auriga);
                             total.pegasus += parseInt(sortedData[i].pegasus);
                             total.cassiopeia += parseInt(sortedData[i].cassiopeia);
                             total.draco += parseInt(sortedData[i].draco);
@@ -152,10 +159,10 @@
                             '<div class="table-responsive"><table class=\"table table-hover table-borderless\""><thead class="table-dark"><tr"><th scope="col">Position</th><th scope="col">Team</th><th scope="col">Total Score</th></tr></thead><tbody>';
                         
                         var leaderboard = [
-                            {
-                                team: 'Auriga',
-                                score: total.auriga
-                            },
+                            // {
+                            //     team: 'Auriga',
+                            //     score: total.auriga
+                            // },
                             {
                                 team: 'Pegasus',
                                 score: total.pegasus
@@ -186,12 +193,12 @@
                         $('#leader-div').html(leaderboardTable);
 
                         var table =
-                            '<div class="table-responsive"><table class=\"table table-hover table-borderless\""><thead class="table-dark"><tr"><th scope="col">Event</th><th scope="col">Auriga</th><th scope="col">Pegasus</th><th scope="col">Cassiopeia</th><th scope="col">Draco</th></tr></thead><tbody>';
+                            '<div class="table-responsive"><table class=\"table table-hover table-borderless\""><thead class="table-dark"><tr"><th scope="col">Event</th><th scope="col">Pegasus</th><th scope="col">Cassiopeia</th><th scope="col">Draco</th></tr></thead><tbody>';
 
                         for (var i = 0; i < sortedData.length; i++) {
                             table += '<tr>';
                             table += '<th scope="row">' + sortedData[i].event + '</td>';
-                            table += '<td>' + sortedData[i].auriga + '</td>';
+                            // table += '<td>' + sortedData[i].auriga + '</td>';
                             table += '<td>' + sortedData[i].pegasus + '</td>';
                             table += '<td>' + sortedData[i].cassiopeia + '</td>';
                             table += '<td>' + sortedData[i].draco + '</td>';

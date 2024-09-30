@@ -59,9 +59,8 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-10">
-						<h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">CAD Hackathon</h1>
-						<span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300">April
-							10th-12th</span>
+						<h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">Lingo Blend</h1>
+						<span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300">March - April</span>
 					</div>
 				</div>
 			</div>
@@ -79,22 +78,53 @@
 
 				<div class="row mb-5">
 					<div class="col-lg-9 mt-12 pl-lg-12" data-aos="fade-up" data-aos-delay="200">
-						<h2><span class="text-primary">Theme</span></h2>
+						<h2><span class="text-primary">Problem Statement</span></h2>
 						<p style="text-align: justify;">
-							This is a 36-hour adrenaline contest of wits and creativity in which, the house with the
-							most innovative
-							and viable design would emerge to be victorious.<br>The hackathon problem statement will be
-							revealed on
-							the spot.
+							India stands as one of the most linguistically diverse countries globally, boasting over 1,600 languages and dialects. In this problem statement, we present two distinct subtasks of increasing complexity, each addressing various aspects of translation.
 						</p>
 						<br>
-						<h2><span class="text-primary">Other Details</span></h2>
+						<h2><span class="text-primary">Subtask 1: Language Classification [100]						</span></h2>
+						<p style="text-align: justify;">
+							Participants are given 500 sentences, each potentially in Bengali, Hindi, Punjabi, Tamil, or Telugu. The challenge is to identify the language by predicting its label, as outlined in the following :
+							<ul>
+								<li>Bengali: 0</li>
+								<li>Hindi: 1</li>
+								<li>Punjabi: 2</li>
+								<li>Tamil: 3</li>
+								<li>Telugu: 4</li>
+							</ul>
+							<h5><span class="text-primary">Evaluation Metrics</span></h5>
+								Macro-weighed f1-score, as implemented in scikit-learn, will be considered for evaluation
+						</p>
+						<br>
+						<h2><span class="text-primary">Subtask 2: English Translation [100]</span></h2>
+						<p style="text-align: justify;">
+							Participants are provided with 500 different unlabeled sentences. The task involves developing an AI model that translates these sentences into English.
+
+							<h5><span class="text-primary">Evaluation Metrics</span></h5>
+							The average score calculated using BLEU, ROUGE-1 will be used for evaluation. (BLEU + ROUGE-1 + 2*ROUGE-2 + ROUGE-L) / 5.
+						</p>
+
+						<br>
+						<h2><span class="text-primary">Judging Criteria</span></h2>
+						<p style="text-align: justify;">
+							<ol>
+								<li>The performance of the model will carry a total of 200 marks. Each subtask has its own metrics and different points associated with itself. The final score will be the aggregate weighted score of each subtask.</li>
+								<li>The presentation carries a total of 50 marks, and the teams will be judged on the originality of their approach, depth of research, and their presentation.</li>
+							</ol>
+								
+						</p>
+						
+						<br>
+						<h2><span class="text-primary">Resouces</span></h2>
 						<p style="text-align: justify;">
 							<ul>
-								<li>This is a low-prep problem statement</li>
-								<li>A team can contain a maximum of 5 members</li>
-								<li>This problem statement will carry 75 points</li>
+								<li><strong>Dataset:</strong> <a href="https://drive.google.com/drive/folders/1MgFU9-6nYeCL-cxymCWYlQQJanmamFAu" target="_blank">https://drive.google.com/drive/folders/1MgFU9-6nYeCL-cxymCWYlQQJanmamFAu</a></li>
+								<li><strong>Translation Starter’s Guide:</strong> <a href="https://huggingface.co/docs/transformers/tasks/translation" target="_blank">https://huggingface.co/docs/transformers/tasks/translation</a></li>
+								<li><strong>Relevant Paper on Code-Mixed Language:</strong> <a href="https://aclanthology.org/W18-3817.pdf" target="_blank">https://aclanthology.org/W18-3817.pdf</a></li>
 							</ul>
+							
+							
 						</p>
 
 					</div>
@@ -102,7 +132,6 @@
 
 			</div>
 		</div>
-
 
 		<footer class="site-footer">
 			<div class="container">

@@ -25,6 +25,9 @@ h6 {
     font-family: "Roboto", sans-serif;
 }
 
+.hidden{
+    display:none;
+}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1394,6 +1397,7 @@ section {
     margin-bottom: 20px;
     /* height: fit-content; */
     width: fit-content;
+    width: -moz-fit-content;
     overflow: hidden;
     border-radius: 4px;
     background: #fff;
@@ -1429,6 +1433,13 @@ section {
     display: inline-block;
     transition: ease-in-out 0.3s;
     color: #fff;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
 }
 
 .portfolio .portfolio-item .member .social a:hover {

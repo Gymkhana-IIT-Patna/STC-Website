@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>ICTC</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="../favicon.png" type="image/png">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" href="../fonts/icomoon/style.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div class="site-wrap">
+
+		<div class="site-mobile-menu">
+			<div class="site-mobile-menu-header">
+				<div class="site-mobile-menu-close mt-3">
+					<span class="icon-close2 js-menu-toggle"></span>
+				</div>
+			</div>
+			<div class="site-mobile-menu-body"></div>
+		</div>
+
+		<header class="site-navbar py-3" role="banner">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-11 col-xl-2">
+						<h1 class="mb-0"><a href="../index.html" class="text-white h2 mb-0">TECH<span
+									class="text-primary">SEASON
+								</span></a></h1>
+					</div>
+					<div class="col-12 col-md-10 d-none d-xl-block">
+						<nav class="site-navigation position-relative text-right" role="navigation">
+							<ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+								<li><a href="../ictc.html">About</a></li>
+								<li class="active"><a href="../problems.html">Problem Statements</a></li>
+								<li><a href="../housedivision.html">Houses</a></li>
+								<li><a href="../housedivision.html">Houses</a></li>
+								<li><a href="../leaderboard.html">Leaderboard</a></li>
+								<li class="cta"><a href="../index.html">Tech Season</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a
+							href="#" class="site-menu-toggle js-menu-toggle text-white"><span
+								class="icon-menu h3"></span></a></div>
+				</div>
+			</div>
+		</header>
+
+		<div class="site-section site-hero">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-10">
+						<h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">Cookie Eating Championship</h1>
+						<span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300">March-April</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="site-section">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-lg-9">
+						<div class="site-section-heading" data-aos="fade-up">
+							<h2>Details</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-5">
+					<div class="col-lg-9 mt-12 pl-lg-12" data-aos="fade-up" data-aos-delay="200">
+
+						<h2><span class="text-primary">Problem Statement</span></h2>
+						<p style="text-align: justify;">
+							Forgive me for the clickbait title. We have a cybersecurity problem statement. The latter part of this document lists a set of vulnerabilities. We expect the participants to approach the following objectives for each vulnerability listed:
+								<ul>
+									<li>Understand the target application and its deployment techniques</li>
+									<li>Analyse the target application for potential attack surfaces</li>
+									<li>Analyse the consequences of a successful exploitation of the given vulnerability</li>
+									<li>Develop a proof of concept exploit demonstrating the given vulnerability</li>
+									<li>Document your technical understanding of the vulnerability and the process for developing the proof of concept exploit. Participants should also mention steps to reproduce the process locally and share all the codes generated for exploit creation/demonstration.</li>
+									<li>Create a video demonstrating the proof of concept exploit in action</li>
+								</ul>
+							
+							</p>
+
+						<br>
+						<h2><span class="text-primary">Judging Criteria</span></h2>
+						<p style="text-align: justify;">
+							Each vulnerability will be judged separately and will account for its own specified amount of points(whole score will be scaled down to 250) based on the following criteria:
+							<ol>
+								<li>The report should mention all the necessary technical explanations - details of the vulnerability (with code), steps to prepare the exploit, and the generated results.</li>
+								<li>The video should provide a step-by-step explanation of the process used.</li>
+								<li>Effectiveness of the exploit in compromising the target system</li>
+								<li>Uniqueness and creativity in the process of exploit development</li>
+								<li>Adherence to the best practices and ethical considerations</li>
+							</ol>
+						</p>
+
+						<br>
+						<h2><span class="text-primary">Submission</span></h2>
+						<p style="text-align: justify;">
+							The participating team needs to submit a report, a video demonstration and all the codes used in exploit creation/demonstration for each vulnerability.
+						</p>
+						<br>
+						<h2><span class="text-primary">Vulnerabilities</span></h2>
+						<p style="text-align: justify;">
+							<ul>
+								<li><strong>CVE-2022-34982</strong> [20 Points]</li>
+								<p>The eziod package in PyPI before v0.0.1 included a code execution backdoor inserted by a third party.</p>
+							
+								<li><strong>CVE-2023-52289</strong> [30 Points]</li>
+								<p>An issue was discovered in the flaskcode package through 0.0.8 for Python. An unauthenticated directory traversal, exploitable with a POST request to a /update-resource-data/<file_path> URI (from views.py), allows attackers to write to arbitrary files.</p>
+							
+								<li><strong>CVE-2023-49277</strong> [40 Points]</li>
+								<p>dpaste is an open source pastebin application written in Python using the Django framework. A security vulnerability has been identified in the expires parameter of the dpaste API, allowing for a POST Reflected XSS attack. This vulnerability can be exploited by an attacker to execute arbitrary JavaScript code in the context of a user's browser, potentially leading to unauthorized access, data theft, or other malicious activities. Users are strongly advised to upgrade to dpaste release v3.8 or later versions, as dpaste versions older than v3.8 are susceptible to the identified security vulnerability. No known workarounds have been identified, and applying the patch is the most effective way to remediate the vulnerability.</p>
+							
+								<li><strong>CVE-2023-34446</strong> [40 Points]</li>
+								<p>iTop is an open-source, web-based IT service management platform. Prior to versions 3.0.4 and 3.1.0, when displaying `pages/preferences.php`, cross site scripting is possible. This issue is fixed in versions 3.0.4 and 3.1.0.</p>
+							
+								<li><strong>CVE-2023-46575</strong> [50 Points]</li>
+								<p>A SQL injection vulnerability exists in Meshery prior to version v0.6.179, enabling a remote attacker to retrieve sensitive information and execute arbitrary code through the “order” parameter.</p>
+							
+								<li><strong>CVE-2023-51378</strong> [50 Points]</li>
+								<p>Cross-Site Request Forgery (CSRF) vulnerability in Rise Themes Rise Blocks – A Complete Gutenberg Page Builder. This issue affects Rise Blocks – A Complete Gutenberg Page Builder: from n/a through 3.1.</p>
+							
+								<li><strong>CVE-2023-40078</strong> [70 Points]</li>
+								<p>In a2dp_vendor_opus_decoder_decode_packet of a2dp_vendor_opus_decoder.cc, there is a possible out-of-bounds write due to a heap buffer overflow. This could lead to paired device escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+							</ul>
+							
+
+
+						<br>
+
+						<h2><span class="text-primary">Resouces</span></h2>
+						<p style="text-align: justify;">
+							<ul>
+								<li><a href="https://github.com/Njack-IITP/cybersecurity" target="_blank">https://github.com/Njack-IITP/cybersecurity</a></li>
+								<li><a href="https://www.hacker101.com/" target="_blank">https://www.hacker101.com/</a></li>
+								<li><a href="https://www.hackerone.com/" target="_blank">https://www.hackerone.com/</a></li>
+								<li><a href="https://cvedetails.com/" target="_blank">https://cvedetails.com/</a></li>
+								<li><a href="https://picoctf.org/" target="_blank">https://picoctf.org/</a></li>
+								<li><a href="https://tryhackme.com" target="_blank">https://tryhackme.com</a></li>
+								<li><a href="https://overthewire.org/wargames" target="_blank">https://overthewire.org/wargames</a></li>
+								<li><a href="https://portswigger.net/web-security/all-topics" target="_blank">https://portswigger.net/web-security/all-topics</a></li>
+							</ul>
+							
+						</p>
+						<br>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-md-4">
+						<h2 class="footer-heading text-uppercase mb-4">About IIT Patna</h2>
+						<p>Indian Institute of Technology Patna is one of the new IITs established by an Act of the
+							Indian Parliament on August 06, 2008.</p>
+					</div>
+					<div class="col-md-3 ml-auto">
+						<h2 class="footer-heading text-uppercase mb-4">Quick Links</h2>
+						<ul class="list-unstyled">
+							<li><a href="https://www.iitp.ac.in/" target="_blank">IIT Patna</a></li>
+							<li><a href="https://www.iitp.ac.in/gymkhana/" target="_blank">Gymkhana IIT Patna</a></li>
+							<li><a href="https://stc.iitp.ac.in/" target="_blank">Technical Council</a></li>
+							<li><a href="https://stc.iitp.ac.in/techseason/" target="_blank">Tech Season</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div class="row-md-12">
+							<h2 class="footer-heading text-uppercase mb-4">Connect with Us</h2>
+							<p>
+								<a href="https://www.facebook.com/stc.iitp/" class="p-2 pl-0" target="_blank"><span
+										class="icon-facebook"></span></a>
+								<a href="mailto:stc.iitp@gmail.com" class="p-2" target="_blank"><span
+										class="icon-mail_outline"></span></a>
+								<a href="https://twitter.com/stc_iitp" class="p-2" target="_blank"><span
+										class="icon-twitter" target="_blank"></span></a>
+								<a href="https://www.instagram.com/stc.iitp/" class="p-2" target="_blank"><span
+										class="icon-instagram" target="_blank"></span></a>
+							</p>
+						</div>
+						<div class="row-md-12">
+							<div class="col-lg-5">
+								<img src="../images/stc_icon_tr.png" alt="Image" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col-md-12 text-center">
+						<div class="border-top pt-5">
+							<p>
+								Copyright &copy; <script>
+									document.write(new Date().getFullYear());
+								</script> All rights reserved | STC IIT Patna <a href="https://colorlib.com"
+									target="_blank"></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/aos.js"></script>
+
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
