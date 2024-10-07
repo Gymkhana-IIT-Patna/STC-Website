@@ -1,5 +1,20 @@
 const sheetId = '1GkJ46gbLhh34ykuXKQ2GtSULoVP27JcPjebmceoOL7I';
 const apiKey = 'AIzaSyDAzNZuuX5lps-RT6AkC2hhVhi4cE12qH0';
+/*
+  WARNING: API Key Usage Notice
+
+  This API key is strictly for fetching data related to events from the designated spreadsheet.
+  It is NOT to be used for any other purpose, including unauthorized data requests or
+  any service outside the scope of this project.
+
+  Any misuse or attempt to use the API key for purposes other than the defined task
+  will result in the immediate termination of access to this page and potential further actions.
+
+  Please handle this key responsibly and in compliance with the project guidelines.
+
+  Thank you.
+*/
+
 
 // Google Sheets API URL (fetch data from columns A to F)
 const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Events!A:G?key=${apiKey}`;
