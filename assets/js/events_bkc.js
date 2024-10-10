@@ -77,6 +77,8 @@ function createEventCards(events) {
       image.src="assets/img/club-pics/MoodBoard/MoodBoard.jpg";
     }else if(clubs==="DWDG"){
       image.src="assets/img/club-pics/DWDG/dwdg.jpg";
+    }else if(clubs==="ACE"){
+      image.src="assets/img/club-pics/ACE/ACE logo.png";
     };
 
     const title = document.createElement('h2');

@@ -72,7 +72,6 @@
 
 .event-card:hover p{
   max-height: fit-content;
-  overflow: visible;
 }
 
 .event-card img {
@@ -81,16 +80,6 @@
   object-fit: cover; 
   border-radius: 8px;
   margin-bottom: 1rem; 
-}
-
-.event-card .description {
-  flex-grow: 1; 
-  margin-bottom: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; 
-  -webkit-box-orient: vertical;
 }
    
   @media(max-width:600px){
