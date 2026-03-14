@@ -46,7 +46,7 @@
                     <div class="col-12 col-md-10 d-none d-xl-block">
                         <nav class="site-navigation position-relative text-right" role="navigation">
                             <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                                <li class="cta"><a href="./ictc.html">ICTC 2.0</a></li>
+                                <li class="cta"><a href="./ictc.html">ICTC 3.0</a></li>
                                 <li><a href="./index.html">Home</a></li>
                                 <li><a href="https://docs.google.com/document/d/1t4_XEc_8A7e_lOYxm47l6QvEqv5jm0O88UuK0pErDbw/edit?usp=sharing"
                                         target="_blank">Rulebook</a></li>
@@ -168,7 +168,8 @@
 
     <script type="text/javascript">
         $.ajax({
-            url:'https://docs.google.com/spreadsheets/d/e/2PACX-1vQWj1eLQf_TMbnH4jss2YIl79UKrNTbKxPTzydvwuoMiESBzQffYppCScL20bbgs_-urnZFM5xW9P28/pub?gid=443432262&single=true&output=csv',
+            url:'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgJoLynzBnIaonrbaAgjzpI7pO2gF4YEpfcVXYfyq4eqdgpIYLIRBiKoiRFNMT2A_3JBHORnuA_rSd/pub?gid=0&single=true&output=csv',
+            // url:'https://docs.google.com/spreadsheets/d/e/2PACX-1vQWj1eLQf_TMbnH4jss2YIl79UKrNTbKxPTzydvwuoMiESBzQffYppCScL20bbgs_-urnZFM5xW9P28/pub?gid=443432262&single=true&output=csv',
             // url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS8dHAjWp9kvXtN564RcOvaBZQwBQ76tUaAB_HI216z-gykevMzwppC5w0DdGYZ63QHhUTl1P_ylA6-/pub?gid=0&single=true&output=csv',
             success: loadDataToState,
             error: function () {
@@ -196,11 +197,7 @@
 
             for (var i = 1; i < rows.length; i++) {
                 var cells = rows[i].split(',');
-                if (cells.length == 0) {
-                    $('#leader-div').html('<p>Data could not be parsed.</p>');
-                    return;
-                }
-                if (cells[0].length != 0) {
+				console.log(cells);
                     // console.log(cells[3])
                     if (cells[4] == 'Auriga') {
                         auriga.push({
@@ -230,7 +227,6 @@
                             // program: cells[2],
                         })
                     }
-                }
 
 
 
@@ -253,6 +249,7 @@
                 cassiopeiaClone = cassiopeia;
                 dracoClone = draco;
             }
+			   console.log(pegasus);
 
             // renderTableToDom(auriga, pegasus, cassiopeia, draco);
             renderTableToDom([], [], [], []);

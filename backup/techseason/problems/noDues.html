@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>ICTC</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="../favicon.png" type="image/png">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" href="../fonts/icomoon/style.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div class="site-wrap">
+
+		<div class="site-mobile-menu">
+			<div class="site-mobile-menu-header">
+				<div class="site-mobile-menu-close mt-3">
+					<span class="icon-close2 js-menu-toggle"></span>
+				</div>
+			</div>
+			<div class="site-mobile-menu-body"></div>
+		</div>
+
+		<header class="site-navbar py-3" role="banner">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-11 col-xl-2">
+						<h1 class="mb-0"><a href="../index.html" class="text-white h2 mb-0">TECH<span
+									class="text-primary">SEASON
+								</span></a></h1>
+					</div>
+					<div class="col-12 col-md-10 d-none d-xl-block">
+						<nav class="site-navigation position-relative text-right" role="navigation">
+							<ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+								<li><a href="../ictc.html">About</a></li>
+								<li class="active"><a href="../problems.html">Problem Statements</a></li>
+								<li><a href="../housedivision.html">Houses</a></li>
+								<li><a href="../leaderboard.html">Leaderboard</a></li>
+								<li class="cta"><a href="../index.html">Tech Season</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a
+							href="#" class="site-menu-toggle js-menu-toggle text-white"><span
+								class="icon-menu h3"></span></a></div>
+				</div>
+			</div>
+		</header>
+
+		<div class="site-section site-hero">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-10">
+						<h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">EZDues
+						</h1>
+						<span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300">Feb-March</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="site-section">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-lg-9">
+						<div class="site-section-heading" data-aos="fade-up">
+							<h2>Details</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-5">
+					<div class="col-lg-9 mt-12 pl-lg-12" data-aos="fade-up" data-aos-delay="200">
+
+						<h2><span class="text-primary">Problem Statement</span></h2>
+						<p style="text-align: justify;">
+							Develop a “No Dues Portal” for IIT P students graduating, which will cover the due clearance process of all the different sections of the college seamlessly. 
+
+							The participants of the project will be the students, admins, and different departments where the student needs to apply for No dues. 
+							
+							<ol>
+								<li>Students: Students will have their own individual account on the website, where students in need for “No Dues” can request to the concerned department through the website.</li>
+								<li>Departments: There are various departments where the student needs to apply for “No Dues”. A list of such concerned departments at IIT Patna are:
+									<ul>
+										<li>Hostel</li>
+										<li>Sports</li>
+										<li>TPC (Training and Placement Cell)</li>
+										<li>Academic Section</li>
+										<li>Admin Section</li>
+										<li>Accounts Section</li>
+										<li>Computer Center</li>
+										<li>Department</li>
+
+											<li>Civil Workshop</li>
+											<li>Mechanical Workshop</li>
+											<li>Electrical Workshop</li>
+									</ul>
+									These departments can add any fine imposed on any student, maintain a digital record and issue “No Dues” certificates electronically. On a student's request of “No Dues”, they can then approve/reject the request, based on any pending dues by the student(which will be maintained on the website). 
+
+									</li>
+									<li>Admin: The role of the admin will be to create accounts for incoming students, close records of graduated students and resolve any issues regarding forgotten username or password.
+									</li>
+							</ol>
+						</p>
+
+						<br>
+						<h2><span class="text-primary">Feature Guidelines</span></h2>
+						<p style="text-align: justify;">
+							<ul>
+								<li>Students</li>
+								<ul>
+									<li>Outlook-based user authentication.</li>
+									<li>Dashboard with quick details of dues with deadlines.</li>
+									<li>Clearance checklist - a comprehensive list outlining all necessary clearances for students.</li>
+									<li>Feature for uploading payment proofs of dues by students.</li>
+									<li>Search and filter functionality for different departments and due amounts.</li>
+									<li>Deadline Tracking: Clear display of deadlines for clearance submission.</li>
+								</ul>
+								<li>
+									Departments
+									<ul>
+										<li>Dashboard with quick details of dues the department owes from students.</li>
+										<li>Adding dues of any student with details like amount, reason, damage proofs, etc., for fines.</li>
+										<li>Payment proof verification and approval.</li>
+										<li>Search and filter students based on how much due each student has.</li>
+										<li>Auto approval: On request of “No Dues” by a student, the system will auto approve the request (after a deadline) when there are no existing dues in the record if no action is taken by the concerned department.</li>
+									</ul>
+									
+								</li>
+								<li>
+									Admins
+									<ul>
+										<li>User authentication (this will be the master account).</li>
+										<li>Bulk registration through the admin pane by passing an Excel sheet or a CSV and mailing their credentials in case of new admissions.</li>
+										<li>Super admin panel: Easy maintenance of accounts by Admin, creation of new accounts in case of incoming batches, and closing accounts of graduated users.</li>
+									</ul>
+									
+								</li>
+							</ul>
+						</p>
+
+						<br>
+						<h2><span class="text-primary">Bonus Features</span></h2>
+						
+						<p style="text-align: justify;">
+							<ol>
+								<li>Option to pay the fine through the portal itself.</li>
+								<li>Bulk registration through the admin pane by passing an Excel sheet or a CSV and mailing their credentials in case of new admissions.</li>
+								<li>Adding fine for multiple students through Excel sheet or a CSV.</li>
+								<li>Email reminders to students for dues with approaching deadlines.</li>
+							</ol>
+							
+						</p>
+
+						<br>
+
+						<h2><span class="text-primary">Rules</span></h2>
+						
+						<p style="text-align: justify;">
+							<ol>
+								<li>Don’t use any kind of paid/cloud-based products (like AWS, Google Cloud, MongoDB Atlas, Azure, Firebase) in your solution.</li>
+								<li>Try to use scalable database services like MySQL, SQLite.</li>
+								<li>Plagiarism is not allowed. You can use open-source licensed code, however.</li>
+								<li>Decision made by judges is final.</li>
+							</ol>
+							
+							
+						</p>
+
+						<br>
+
+						<h2><span class="text-primary">Judging Criteria</span></h2>
+						<p style="text-align: justify;">
+							The evaluation will be on the basis of:
+							<ol>
+								<li>UI/UX - 10%</li>
+								<li>Ease of Use - 10%</li>
+								<li>Functionality - 30%</li>
+								<li>Scalability and Maintainability - 20%</li>
+								<li>Technical Complexity - 30%</li>
+							</ol>
+						</p>
+
+						<br>
+						<h2><span class="text-primary">Other Details</span></h2>
+						<p style="text-align: justify;">
+							<ul>
+								<li>Submission
+									<ol>
+										<li>Source code</li>
+											<li>Demo video
+											</li>
+									</ol>
+								</li>
+								<li>Example : <a href="https://blog.iris.nitk.ac.in/no-dues-procedure/">IRIS portal</a> by NIT Surathkal</li>
+							</ul>
+						</p>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-md-4">
+						<h2 class="footer-heading text-uppercase mb-4">About IIT Patna</h2>
+						<p>Indian Institute of Technology Patna is one of the new IITs established by an Act of the
+							Indian Parliament on August 06, 2008.</p>
+					</div>
+					<div class="col-md-3 ml-auto">
+						<h2 class="footer-heading text-uppercase mb-4">Quick Links</h2>
+						<ul class="list-unstyled">
+							<li><a href="https://www.iitp.ac.in/" target="_blank">IIT Patna</a></li>
+							<li><a href="https://www.iitp.ac.in/gymkhana/" target="_blank">Gymkhana IIT Patna</a></li>
+							<li><a href="https://stc.iitp.ac.in/" target="_blank">Technical Council</a></li>
+							<li><a href="https://stc.iitp.ac.in/techseason/" target="_blank">Tech Season</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div class="row-md-12">
+							<h2 class="footer-heading text-uppercase mb-4">Connect with Us</h2>
+							<p>
+								<a href="https://www.facebook.com/stc.iitp/" class="p-2 pl-0" target="_blank"><span
+										class="icon-facebook"></span></a>
+								<a href="mailto:stc.iitp@gmail.com" class="p-2" target="_blank"><span
+										class="icon-mail_outline"></span></a>
+								<a href="https://twitter.com/stc_iitp" class="p-2" target="_blank"><span
+										class="icon-twitter" target="_blank"></span></a>
+								<a href="https://www.instagram.com/stc.iitp/" class="p-2" target="_blank"><span
+										class="icon-instagram" target="_blank"></span></a>
+							</p>
+						</div>
+						<div class="row-md-12">
+							<div class="col-lg-5">
+								<img src="../images/stc_icon_tr.png" alt="Image" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col-md-12 text-center">
+						<div class="border-top pt-5">
+							<p>
+								Copyright &copy; <script>
+									document.write(new Date().getFullYear());
+								</script> All rights reserved | STC IIT Patna <a href="https://colorlib.com"
+									target="_blank"></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
