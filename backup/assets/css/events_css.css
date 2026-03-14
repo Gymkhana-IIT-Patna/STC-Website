@@ -1,5 +1,5 @@
 .nav_container{
-  background-color: black;
+  background-color: #181C14;
   height: 7rem;
   display: flex;
   justify-content: center;
@@ -23,7 +23,6 @@
   top: 4rem;
 }
 
-
 .events-container {
   display: flex;
   flex-wrap: wrap;
@@ -32,11 +31,13 @@
   gap: 1.5rem; 
 }
 
-
 .event-card {
   width: 300px; 
   background-color: rgb(8, 8, 8);
   border-radius: 8px;
+  border-style: solid;
+  border-width: 3px;
+  border-image: linear-gradient(to right, rgba(221, 160, 221, 0), rgb(227, 8, 227), rgba(221, 160, 221, 0)) 1;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -77,10 +78,11 @@
 .event-card img {
   width: 100%;
   height: 150px; 
-  object-fit: cover; 
+  object-fit: contain; 
   border-radius: 8px;
   margin-bottom: 1rem; 
 }
+
    
   @media(max-width:600px){
     .heading{
